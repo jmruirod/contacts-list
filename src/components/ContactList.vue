@@ -21,20 +21,22 @@ watch(
 </script>
 
 <template>
-  <div class="relative bg-zinc-900/80 m-w-xl w-full max-w-xl min-h-screen max-h-screen overflow-y-hidden sm:min-h-full sm:rounded-xl sm:shadow-2xl">
+  <div
+    class="relative flex flex-col bg-zinc-900/80 m-w-xl w-full max-w-xl h-screen overflow-hidden sm:min-h-full sm:h-auto sm:max-h-[85vh] sm:rounded-xl sm:shadow-2xl"
+  >
     <header class="bg-sky-900/90 pt-6 pb-4 px-6 sm:rounded-t-xl">
       <h1 class="text-white text-4xl font-bold">Agenda</h1>
     </header>
-    <section class="relative mt-5 flex flex-col gap-2 pb-1">
-      <div class="px-6 py-2">
+    <section class="relative flex flex-col gap-2 overflow-hidden">
+      <div class="px-6 pt-6 pb-2 shrink-0">
         <SearchBar />
       </div>
-      <div class="px-6 py-2">
+      <div class="px-6 py-2 shrink-0">
         <h2 class="text-white text-2xl font-semibold">
           {{ contactListStore.isAddingContact ? "Añadir contacto" : `Contactos (${contactListStore.contacts.length})` }}
         </h2>
       </div>
-      <div class="relative h-[570px] overflow-y-auto [&::-webkit-scrollbar]:hidden">
+      <div class="relative min-h-[570px] grow overflow-y-auto [&::-webkit-scrollbar]:hidden">
         <Transition>
           <div v-if="!contactListStore.isAddingContact" class="divide-y divide-gray-700">
             <ul>
