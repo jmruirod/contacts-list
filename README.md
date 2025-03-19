@@ -1,66 +1,151 @@
-# Contacts List
+# Agenda de Contactos Vue.js
 
-Este proyecto es una aplicación de agenda de contactos desarrollada con Vue 3, TypeScript y Tailwind CSS. Permite a los usuarios buscar, agregar y gestionar contactos de manera sencilla.
+Una aplicación moderna de gestión de contactos desarrollada con Vue.js y Tailwind CSS. Esta aplicación permite almacenar, buscar, editar y eliminar contactos de manera intuitiva y con una interfaz atractiva.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="image/principalView.PNG" alt="Vista principal de la aplicación" width="1000px">
+</p>
+</div>
 
 ## Características
 
-- Interfaz de usuario moderna y responsiva.
-- Búsqueda de contactos.
-- Edición y eliminación de contactos.
-- Uso de iconos SVG para una mejor visualización.
+- ✅ **Gestión de contactos**: Añadir, editar y eliminar contactos
+- 🔍 **Búsqueda en tiempo real**: Filtra contactos mientras escribes
+- 💾 **Persistencia de datos**: Los contactos se guardan en localStorage
+- 🎨 **Diseño responsive**: Funciona en dispositivos móviles y de escritorio
+- ✨ **Animaciones fluidas**: Transiciones suaves para una mejor experiencia de usuario
+- 🌙 **Tema oscuro**: Interfaz elegante y moderna
 
-## Tecnologías Utilizadas
+## Tecnologías utilizadas
 
-- **Vue 3**: Framework de JavaScript para construir interfaces de usuario.
-- **Vite**: Herramienta de construcción rápida para proyectos de frontend.
-- **Tailwind CSS**: Framework CSS para un diseño moderno y responsivo.
-- **TypeScript**: Superset de JavaScript que añade tipos estáticos.
+- **Vue.js 3**: Framework progresivo para construir interfaces de usuario
+- **TypeScript**: Superset de JavaScript con tipado estático
+- **Tailwind CSS**: Framework de CSS utilitario para diseño rápido
+- **Vite**: Herramienta de construcción frontend ultrarrápida
+- **Vue Composition API**: Para una mejor organización del código
+- **LocalStorage API**: Para persistencia de datos en el navegador
+
+## Capturas de pantalla
+
+### Vista principal con lista de contactos
+
+<img src="image/principalViewContactList.PNG" alt="Lista de contactos" width="300px">
+
+### Añadiendo un nuevo contacto
+
+<img src="image/createContact.PNG" alt="Añadir contacto" width="300px">
+
+### Editando un contacto existente
+
+<img src="image/editContact.PNG" alt="Editar contacto" width="300px">
+
+### Búsqueda de contactos
+
+<img src="image/seachContact.PNG" alt="Búsqueda de contactos" width="300px">
+
+### Vista mobile
+
+<img src="image/mobileView.PNG" alt="Vista Móvil" width="300px">
 
 ## Instalación
 
-Para instalar y ejecutar el proyecto, sigue estos pasos:
+### Requisitos previos
+
+- Node.js (v14 o superior)
+- pnpm (v7 o superior)
+
+### Pasos para instalar
 
 1. Clona el repositorio:
 
-   ```bash
-   git clone https://github.com/jmruirod/contacts-list
-   cd contacts-list
-   ```
+```bash
+git clone https://github.com/jmruirod/contacts-list
+cd contacts-list
+```
 
 2. Instala las dependencias:
 
-   ```bash
-   pnpm install
-   ```
+```bash
+pnpm install
+```
 
 3. Inicia el servidor de desarrollo:
 
-   ```bash
-   pnpm dev
-   ```
+```bash
+pnpm dev
+```
 
-4. Abre tu navegador y visita `http://localhost:3000` para ver la aplicación en acción.
+4. Abre tu navegador en `http://localhost:5173`
 
-## Compilación para Producción
+## Construcción para producción
 
-Para compilar la aplicación para producción, ejecuta:
+Para construir la aplicación para producción:
 
 ```bash
 pnpm build
 ```
 
-## Linting y Formateo
+Los archivos compilados se guardarán en el directorio `dist/`.
 
-Para verificar el código y aplicar el formateo, utiliza:
+## Estructura del proyecto
 
-```bash
-pnpm lint
+```
+/
+├── public/            # Archivos estáticos
+├── src/
+│   ├── components/    # Componentes Vue
+│   │   ├── ContactList.vue      # Lista de contactos
+│   │   ├── ContactCard.vue      # Tarjeta de contacto individual
+│   │   ├── ContactForm.vue      # Formulario para añadir/editar contactos
+│   │   ├── SearchBar.vue        # Barra de búsqueda
+│   │   └── icons/               # Componentes de iconos
+│   ├── store/         # Gestión del estado
+│   │   └── contactListStore.ts  # Store para los contactos
+│   ├── App.vue        # Componente raíz
+│   └── main.ts        # Punto de entrada
+├── index.html         # Plantilla HTML
+├── package.json       # Dependencias y scripts
+├── tailwind.config.js # Configuración de Tailwind CSS
+├── tsconfig.json      # Configuración de TypeScript
+└── vite.config.ts     # Configuración de Vite
 ```
 
-## Contribuciones
+## Uso
 
-Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issue o envía un pull request.
+### Añadir un contacto
+
+1. Haz clic en el botón con el símbolo "+" en la esquina inferior derecha.
+2. Completa los campos del formulario (nombre, teléfono, email).
+3. Haz clic en "Guardar".
+
+### Editar un contacto
+
+1. Haz clic en el icono de lápiz junto al contacto que deseas editar.
+2. Modifica los campos necesarios.
+3. Haz clic en "Guardar".
+
+### Eliminar un contacto
+
+1. Haz clic en el icono de papelera junto al contacto que deseas eliminar.
+2. El contacto se eliminará inmediatamente.
+
+### Buscar contactos
+
+1. Escribe en la barra de búsqueda en la parte superior.
+2. Los contactos se filtrarán automáticamente según tu entrada.
+
+## Características de accesibilidad
+
+- Contraste de colores adecuado para una mejor legibilidad
+- Navegación con teclado
+- Mensajes de retroalimentación visual cuando se realizan acciones
+- Indicadores de carga durante operaciones
+
+## Desarrollado con ❤️ por
+
+- Jose Manuel Ruiz Rodríguez - [GitHub](https://github.com/jmruirod)
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT.
+Este proyecto está licenciado bajo la Licencia MIT
