@@ -82,19 +82,23 @@ watch(
 
 <template>
   <div ref="cardRef" class="flex flex-col bg-zinc-900/80 px-6 pt-3 py-3 hover:bg-sky-800/10 cursor-pointer transition-all duration-300">
-    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-3 sm:gap-6">
       <div class="bg-zinc-800 rounded-full p-2 text-white">
-        <UserIcon />
+        <UserIcon class="w-[50px] h-[50px] sm:w-[70px] sm:h-[70px]" />
       </div>
-      <div class="relative flex flex-col w-[380px] h-[80px]">
-        <h2 class="text-white text-2xl font-bold truncate">{{ contact?.name }}</h2>
-        <p class="text-zinc-400 text-sm truncate">{{ contact?.phone }}</p>
-        <Transition name="fade">
-          <p v-if="!showSuccess" class="text-zinc-400 text-sm truncate">{{ contact?.email }}</p>
-        </Transition>
-        <Transition name="bounce">
-          <div v-if="showSuccess" class="absolute bottom-2 left-0 text-emerald-500 text-md font-bold">Contacto guardado correctamente.</div>
-        </Transition>
+      <div class="relative flex flex-col w-[380px] justify-center min-h-[80px]">
+        <h2 class="text-white text-xl sm:text-2xl font-bold truncate">{{ contact?.name }}</h2>
+        <p class="text-zinc-400 text-xs sm:text-sm truncate">{{ contact?.phone }}</p>
+        <div class="min-h-[16px]">
+          <Transition name="fade">
+            <p v-if="!showSuccess" class="text-zinc-400 text-xs sm:text-sm truncate">{{ contact?.email }}</p>
+          </Transition>
+          <Transition name="bounce">
+            <div v-if="showSuccess" class="absolute bottom-2 left-0 text-emerald-500 text-xs sm:text-md font-bold text-nowrap">
+              Contacto guardado correctamente.
+            </div>
+          </Transition>
+        </div>
       </div>
       <div v-if="!contactListStore.isAddingContact" class="flex w-[50px] flex-col justify-end items-end gap-4">
         <button @click="editContact" class="text-white hover:text-white/80"><PencilIcon /></button>

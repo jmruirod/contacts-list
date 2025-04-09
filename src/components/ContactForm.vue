@@ -49,30 +49,32 @@ const validateForm = computed(() => {
       v-model="form.name"
       type="text"
       placeholder="Nombre"
-      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
+      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400 text-sm sm:text-base"
     />
     <input
       v-model="form.phone"
       type="text"
       placeholder="Teléfono"
-      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
+      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400 text-sm sm:text-base"
     />
     <input
       v-model="form.email"
       type="text"
       placeholder="Email (opcional)"
-      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
+      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400 text-sm sm:text-base"
     />
 
-    <div class="flex justify-end gap-2">
-      <button @click="cancelContact" class="bg-zinc-700/90 hover:bg-zinc-700/60 transition-all duration-300 px-4 rounded-md text-white">Cancelar</button>
+    <div class="flex justify-center sm:justify-end gap-2">
+      <button @click="cancelContact" class="flex-1 sm:flex-none bg-zinc-700/90 hover:bg-zinc-700/60 transition-all duration-300 px-4 rounded-md text-white">
+        Cancelar
+      </button>
       <button
         @click="saveContact"
         :disabled="!validateForm"
-        class="bg-sky-900/90 hover:bg-sky-900/60 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-sky-900/90 transition-all duration-300 px-2 py-1.5 rounded-md text-white"
+        class="flex-1 sm:flex-none bg-sky-900/90 hover:bg-sky-900/60 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-sky-900/90 transition-all duration-300 px-2 py-1.5 rounded-md text-white"
         :class="{ 'opacity-50 cursor-not-allowed hover:bg-sky-900/90': isSaving }"
       >
-        <div class="flex px-2">
+        <div class="flex justify-center px-2">
           <SpinIcon v-if="isSaving" />
           <span>{{ isSaving ? "Guardando..." : "Guardar" }}</span>
         </div>
