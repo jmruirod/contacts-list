@@ -22,16 +22,16 @@ watch(
 
 <template>
   <div
-    class="relative flex flex-col bg-zinc-900/80 m-w-xl w-full max-w-xl h-screen overflow-hidden sm:min-h-full sm:h-auto sm:max-h-[85vh] sm:rounded-lg sm:shadow-2xl"
+    class="relative flex flex-col bg-zinc-900/80 m-w-xl w-full max-w-xl min-h-screen overflow-hidden sm:min-h-full sm:h-auto sm:max-h-[85vh] sm:rounded-lg sm:shadow-2xl"
   >
-    <header class="bg-sky-900/90 pt-6 pb-4 px-6 sm:rounded-t-lg">
+    <header class="bg-sky-900/90 pt-6 pb-4 px-3 sm:px-6 sm:rounded-t-lg">
       <h1 class="text-white text-4xl font-bold">Agenda</h1>
     </header>
     <section class="relative flex flex-col gap-2 overflow-hidden">
-      <div class="px-6 pt-6 pb-2 shrink-0">
+      <div class="px-3 sm:px-6 pt-6 pb-2 shrink-0">
         <SearchBar />
       </div>
-      <div class="px-6 py-2 shrink-0">
+      <div class="px-3 sm:px-6 py-2 shrink-0">
         <h2 class="text-white text-2xl font-semibold">
           {{ contactListStore.isAddingContact ? "Añadir contacto" : `Contactos (${contactListStore.contacts.length})` }}
         </h2>
@@ -62,7 +62,7 @@ watch(
           contactListStore.isAddingContact = true;
           contactListStore.currentContactId = -1;
         "
-        class="absolute bottom-10 right-15 bg-sky-900/90 hover:bg-sky-900/60 transition-all duration-300 p-2 rounded-full text-white"
+        class="absolute bottom-15 sm:bottom-10 right-10 sm:right-15 bg-sky-900/90 hover:bg-sky-900/60 transition-all duration-300 p-2 rounded-full text-white"
       >
         <AddIcon />
       </button>

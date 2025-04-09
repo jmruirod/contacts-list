@@ -81,7 +81,7 @@ watch(
 </script>
 
 <template>
-  <div ref="cardRef" class="flex flex-col bg-zinc-900/80 px-6 pt-3 py-3 hover:bg-sky-800/10 cursor-pointer transition-all duration-300">
+  <div ref="cardRef" class="flex flex-col bg-zinc-900/80 px-2 sm:px-6 py-3 hover:bg-sky-800/10 cursor-pointer transition-all duration-300">
     <div class="flex items-center gap-3 sm:gap-6">
       <div class="bg-zinc-800 rounded-full p-2 text-white">
         <UserIcon class="w-[50px] h-[50px] sm:w-[70px] sm:h-[70px]" />
