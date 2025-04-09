@@ -14,7 +14,7 @@ const searchContacts = (event: Event) => {
 </script>
 
 <template>
-  <div class="flex gap-2 bg-zinc-700 rounded-lg p-2">
+  <div class="flex gap-2 bg-zinc-700 rounded-md p-2">
     <input type="text" placeholder="Buscar contacto..." @input="searchContacts" class="w-full outline-none px-2 text-white placeholder:text-zinc-400" />
     <button class="text-white hover:text-white/80"><SearchIcon /></button>
   </div>

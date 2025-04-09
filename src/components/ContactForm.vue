@@ -44,31 +44,32 @@ const validateForm = computed(() => {
 </script>
 
 <template>
-  <form class="bg-zinc-800/50 rounded-lg text-white flex flex-col gap-3 px-6 py-6">
+  <form class="bg-zinc-800/50 rounded-md text-white flex flex-col gap-3 px-6 py-6">
     <input
       v-model="form.name"
       type="text"
       placeholder="Nombre"
-      class="bg-zinc-700 rounded-lg p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
+      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
     />
     <input
       v-model="form.phone"
       type="text"
       placeholder="Teléfono"
-      class="bg-zinc-700 rounded-lg p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
+      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
     />
     <input
       v-model="form.email"
       type="text"
       placeholder="Email (opcional)"
-      class="bg-zinc-700 rounded-lg p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
+      class="bg-zinc-700 rounded-md p-2 w-full outline-none px-2 text-white placeholder:text-zinc-400"
     />
 
     <div class="flex justify-end gap-2">
+      <button @click="cancelContact" class="bg-zinc-700/90 hover:bg-zinc-700/60 transition-all duration-300 px-4 rounded-md text-white">Cancelar</button>
       <button
         @click="saveContact"
         :disabled="!validateForm"
-        class="bg-sky-900/90 hover:bg-sky-900/60 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-sky-900/90 transition-all duration-300 p-2 rounded-lg text-white"
+        class="bg-sky-900/90 hover:bg-sky-900/60 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-sky-900/90 transition-all duration-300 px-2 py-1.5 rounded-md text-white"
         :class="{ 'opacity-50 cursor-not-allowed hover:bg-sky-900/90': isSaving }"
       >
         <div class="flex px-2">
@@ -76,7 +77,6 @@ const validateForm = computed(() => {
           <span>{{ isSaving ? "Guardando..." : "Guardar" }}</span>
         </div>
       </button>
-      <button @click="cancelContact" class="bg-zinc-700/90 hover:bg-zinc-700/60 transition-all duration-300 p-2 rounded-lg text-white">Cancelar</button>
     </div>
   </form>
 </template>

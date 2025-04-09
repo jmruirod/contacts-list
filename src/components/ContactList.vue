@@ -22,9 +22,9 @@ watch(
 
 <template>
   <div
-    class="relative flex flex-col bg-zinc-900/80 m-w-xl w-full max-w-xl h-screen overflow-hidden sm:min-h-full sm:h-auto sm:max-h-[85vh] sm:rounded-xl sm:shadow-2xl"
+    class="relative flex flex-col bg-zinc-900/80 m-w-xl w-full max-w-xl h-screen overflow-hidden sm:min-h-full sm:h-auto sm:max-h-[85vh] sm:rounded-lg sm:shadow-2xl"
   >
-    <header class="bg-sky-900/90 pt-6 pb-4 px-6 sm:rounded-t-xl">
+    <header class="bg-sky-900/90 pt-6 pb-4 px-6 sm:rounded-t-lg">
       <h1 class="text-white text-4xl font-bold">Agenda</h1>
     </header>
     <section class="relative flex flex-col gap-2 overflow-hidden">
