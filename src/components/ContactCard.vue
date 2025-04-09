@@ -89,7 +89,7 @@ watch(
       <div class="relative flex flex-col w-[380px] justify-center min-h-[80px]">
         <h2 class="text-white text-xl sm:text-2xl font-bold truncate">{{ contact?.name }}</h2>
         <p class="text-zinc-400 text-xs sm:text-sm truncate">{{ contact?.phone }}</p>
-        <div class="min-h-[16px]">
+        <div class="min-h-[20px]">
           <Transition name="fade">
             <p v-if="!showSuccess" class="text-zinc-400 text-xs sm:text-sm truncate">{{ contact?.email }}</p>
           </Transition>
